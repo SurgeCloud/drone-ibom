@@ -18,7 +18,7 @@ pipeline:
   publish:
     image: plugins/docker
     repo: surgecloud/drone-kicad-ibom
-    tags: [latest, 0.0.2]
+    tags: [latest, 0.0.3]
     when:
       branch: master
     secrets: [docker_username, docker_password]
