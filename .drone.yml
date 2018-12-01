@@ -2,7 +2,7 @@ pipeline:
   scripts:
     image: bravissimolabs/alpine-git
     commands:
-      - git clone https://github.com/openscopeproject/InteractiveHtmlBom.git /usr/src/
+      - git clone https://github.com/openscopeproject/InteractiveHtmlBom.git
 
   publish:
     image: plugins/docker
