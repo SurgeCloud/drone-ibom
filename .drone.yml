@@ -1,0 +1,26 @@
+pipeline:
+  scripts:
+    image: bravissimolabs/alpine-git
+    commands:
+      - git clone https://github.com/openscopeproject/InteractiveHtmlBom.git /usr/src/
+
+  publish:
+    image: plugins/docker
+    repo: surgecloud/drone-kicad-ibom
+    #registry: drone.io
+    tags: [edge]
+    when:
+      branch: feature/*
+      event: deployment
+      environment: staging
+    secrets: [docker_username, docker_password]
+
+  publish:
+    image: plugins/docker
+    repo: surgecloud/drone-kicad-ibom
+    tags: [latest, 0.0.1]
+    when:
+      branch: master
+      event: deployment
+      environment: production
+    secrets: [docker_username, docker_password]
