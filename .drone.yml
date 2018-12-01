@@ -21,6 +21,4 @@ pipeline:
     tags: [latest, 0.0.1]
     when:
       branch: master
-      event: deployment
-      environment: production
     secrets: [docker_username, docker_password]
