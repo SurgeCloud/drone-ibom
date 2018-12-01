@@ -1,4 +1,4 @@
-FROM surgecloud/kicad-base
+FROM surgecloud/kicad-base:latest
 
 MAINTAINER tomasz@napierala.org
 
